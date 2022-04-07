@@ -21,13 +21,13 @@ export const getServerSideProps = async () => {
     `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=${exclude}&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}`
   );
   const weatherJson = await weatherRes.json();
-  const weatherNews = weatherJson;
+  const weatherNews = await weatherJson;
+
   return {
     props: {
       weatherNews,
       fallback: "blocking",
     },
-    revalidate: 60,
   };
 };
 export default weather;
