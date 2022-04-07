@@ -103,7 +103,7 @@ const Home = (props: any) => {
 
 export const getStaticProps = async () => {
   // NewsAPIのトップ記事の情報を取得
-  const pageSize = 10;
+  const pageSize = 8;
   const pageSizeForTop = `&pageSize=${pageSize}&`;
   //ニュース
   const urlTopic = `https://newsapi.org/v2/top-headlines?country=jp${pageSizeForTop}apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
