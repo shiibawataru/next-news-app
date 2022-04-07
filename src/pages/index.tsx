@@ -148,6 +148,7 @@ export const getStaticProps = async () => {
       entertainmentArticles,
       sportsArticles,
       weatherNews,
+      fallback: "blocking",
     },
   };
 };
