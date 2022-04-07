@@ -23,7 +23,7 @@ const Science = (props: any) => {
     </>
   );
 };
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const urlScience = `https://newsapi.org/v2/top-headlines?country=jp&category=science&country=jp&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
   const scienceRes = await fetch(urlScience);
   const scienceJson = await scienceRes.json();
