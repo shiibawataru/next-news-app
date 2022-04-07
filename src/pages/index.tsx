@@ -22,7 +22,6 @@ const Today = format(
 );
 
 const Home = (props: any) => {
-  console.log(props.weatherNews);
   return (
     <>
       <title>Wahoo! NIPPON</title>

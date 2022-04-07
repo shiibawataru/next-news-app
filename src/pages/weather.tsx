@@ -2,8 +2,6 @@ import React from "react";
 import WeekWeather from "../components/WeekWeather";
 
 const weather = (props: any) => {
-  console.log(props.weatherNews);
-
   return (
     <>
       <WeekWeather
