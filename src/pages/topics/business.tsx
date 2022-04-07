@@ -1,8 +1,13 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import NewsList from "../../components/NewsList";
 
-const business = (props: any) => {
+const Business = (props: any) => {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
   return (
     <>
       <div>
@@ -27,9 +32,9 @@ export const getStaticProps = async () => {
   return {
     props: {
       businessArticles,
-      fallback: "blocking",
+      fallback: true,
     },
   };
 };
 
-export default business;
+export default Business;
