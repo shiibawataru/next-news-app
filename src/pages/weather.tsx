@@ -26,6 +26,7 @@ export const getStaticProps = async () => {
     props: {
       weatherNews,
     },
+    revalidate: 60,
   };
 };
 export default weather;
