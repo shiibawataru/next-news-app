@@ -13,7 +13,7 @@ const NewsList: React.FC<Props> = ({ articles }) => {
               <div className="container">
                 <a key={index} href={article.url} className={`${styles.a}`}>
                   <div className="row">
-                    <div className="col-md-4  img-hidden">
+                    <div className="col-md-4  img-hidden d-flex justify-content-center">
                       <img
                         src={article.urlToImage}
                         alt="img"

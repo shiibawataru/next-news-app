@@ -35,8 +35,8 @@ const Weather: React.FC<Props> = ({ weatherNews }) => {
               src={`http://openweathermap.org/img/wn/${currentWeatherIcon}@2x.png`}
               alt="Tokyo's weather icon"
               loading="eager"
-              width={220}
-              height={220}
+              width={200}
+              height={200}
             />
             <div>
               <h4>{currentWeatherMain}</h4>
