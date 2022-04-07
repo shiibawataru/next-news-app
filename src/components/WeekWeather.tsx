@@ -3,6 +3,7 @@ import Props from "./types";
 import { parseISO, format, addDays } from "date-fns";
 import ja from "date-fns/locale/ja";
 import Link from "next/link";
+import Image from "next/image";
 
 // 今日の日付
 const now = new Date();
@@ -28,13 +29,14 @@ var dayOfWeekStr = [
 ];
 
 const WeekWeather: React.FC<Props> = ({ weatherNews }) => {
-  //   const currentWeatherMain = weatherNews?.current.weather[0].main;
-  //   const currentWeatherTemp = weatherNews?.current.temp;
-  //   const currentWeatherIcon = weatherNews?.current.weather[0].icon;
-
   return (
     <>
-      <div>週間天気</div>
+      <div>
+        <h1 className="d-flex justify-content-center my-3">
+          週間天気&nbsp;&nbsp;&nbsp;&nbsp;@新宿
+        </h1>
+        <hr />
+      </div>
       <div>
         <ul className="d-flex justify-content-center m-auto p-0 flex-wrap">
           {weatherNews?.daily.map((date, index) => {
@@ -43,10 +45,12 @@ const WeekWeather: React.FC<Props> = ({ weatherNews }) => {
                 <h5>{`${month}月${day + index}日(${
                   dayOfWeekStr[dayOfWeek + index]
                 })`}</h5>
-                <img
+                <Image
                   src={`http://openweathermap.org/img/wn/${date.weather[0].icon}@2x.png`}
                   className="card-img-top"
                   alt="..."
+                  height={140}
+                  width={140}
                 />
                 <div className="card-body">
                   <h4 className="card-title">{date.weather[0].main}</h4>
@@ -62,9 +66,11 @@ const WeekWeather: React.FC<Props> = ({ weatherNews }) => {
             );
           })}
         </ul>
-        <Link href="/">
-          <a href="">戻る</a>
-        </Link>
+        <div className=" d-flex justify-content-center my-4">
+          <Link href="/">
+            <a className="btn btn-info">戻る</a>
+          </Link>
+        </div>
       </div>
     </>
   );

@@ -9,8 +9,6 @@ const CategoryCategoryList = () => {
   return (
     <>
       <div className={styles.body}>
-        {/* <div className={`${styles.body} ${styles.ul}`}> */}
-        {/* <ul className={`${styles.ul} ${styles.a}`}> */}
         <ul className={`p-2 m-1 ${styles.li}`}>
           <li>
             <Link href="/topics/topics">

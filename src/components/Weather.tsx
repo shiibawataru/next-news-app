@@ -30,7 +30,7 @@ const Weather: React.FC<Props> = ({ weatherNews }) => {
           <hr />
           <p>今日の天気</p>
           <div className="d-flex flex-wrap">
-            <img
+            <Image
               className={styles.weather__icon}
               src={`http://openweathermap.org/img/wn/${currentWeatherIcon}@2x.png`}
               alt="Tokyo's weather icon"
@@ -44,7 +44,7 @@ const Weather: React.FC<Props> = ({ weatherNews }) => {
             </div>
           </div>
           <Link href="/weather">
-            <a>週間天気</a>
+            <a className={styles.a}>週間天気</a>
           </Link>
         </div>
       </div>

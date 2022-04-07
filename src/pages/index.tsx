@@ -10,6 +10,8 @@ import Props from "../components/types";
 import Image from "next/image";
 import { parseISO, format } from "date-fns";
 import ja from "date-fns/locale/ja";
+import Advertisement from "../components/Advertisement";
+import SideBlank from "../components/SideBlank";
 // import styles from "../styles/globals.css";
 
 // 今日の日付
@@ -25,7 +27,12 @@ const Home = (props: any) => {
     <>
       <title>Wahoo! NIPPON</title>
       <h1 className="d-flex justify-content-center mx-1">
-        <img src="/img/logo/WAHOO.png" alt="企業ロゴ" />
+        <Image
+          height={61}
+          width={343}
+          src="/img/logo/WAHOO.png"
+          alt="企業ロゴ"
+        />
       </h1>
       <div className="mx-5 d-flex justify-content-center">
         <Search />
@@ -35,44 +42,45 @@ const Home = (props: any) => {
           <div className="row">
             <div className="col-md-2">
               <CategoryList />
+              <SideBlank />
             </div>
             <div className="col-md-6">
               <Tabs>
                 <TabList>
                   <Tab>ニュース</Tab>
                   <Tab>ビジネス</Tab>
-                  <Tab>科学技術</Tab>
+                  <Tab>科学</Tab>
                   <Tab>エンタメ</Tab>
                   <Tab>スポーツ</Tab>
                 </TabList>
                 <TabPanel>
                   <News articles={props.topicArticles} />
                   <Link href="/topics/topics">
-                    <a>もっと見る</a>
+                    <a>もっと見る&nbsp;-ニュース</a>
                   </Link>
                 </TabPanel>
                 <TabPanel>
                   <News articles={props.businessArticles} />
                   <Link href="/topics/business">
-                    <a>もっと見る</a>
+                    <a>もっと見る&nbsp;-ビジネス</a>
                   </Link>
                 </TabPanel>
                 <TabPanel>
                   <News articles={props.scienceArticles} />
                   <Link href="/topics/science">
-                    <a>もっと見る</a>
+                    <a>もっと見る&nbsp;-科学</a>
                   </Link>
                 </TabPanel>
                 <TabPanel>
                   <News articles={props.entertainmentArticles} />
                   <Link href="/topics/entertainment">
-                    <a>もっと見る</a>
+                    <a>もっと見る&nbsp;-エンタメ</a>
                   </Link>
                 </TabPanel>
                 <TabPanel>
                   <News articles={props.sportsArticles} />
                   <Link href="/topics/sports">
-                    <a>もっと見る</a>
+                    <a>もっと見る&nbsp;-スポーツ</a>
                   </Link>
                 </TabPanel>
               </Tabs>
@@ -85,6 +93,9 @@ const Home = (props: any) => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="mx-5 my-3 d-flex justify-content-center">
+        <Advertisement />
       </div>
     </>
   );

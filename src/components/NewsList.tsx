@@ -30,17 +30,6 @@ const NewsList: React.FC<Props> = ({ articles }) => {
                 </a>
                 <hr />
               </div>
-              {/* <ul classNameName="d-flex flex-row">
-                <img
-                  key={index}
-                  src={article.urlToImage}
-                  alt="aaa"
-                  width={120}
-                  height={120}
-                  classNameName="rounded"
-                />
-                <li key={index}>{article.title}</li>
-              </ul> */}
             </>
           );
         })}
