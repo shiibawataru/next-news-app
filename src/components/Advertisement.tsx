@@ -10,7 +10,7 @@ const Advertisement = () => {
         <div>
           <Image
             src="/img/advertisement/sale.jpg"
-            height={120}
+            height={150}
             width={1200}
             alt="advertisement"
           />
