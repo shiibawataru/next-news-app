@@ -12,7 +12,7 @@ const weather = (props: any) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   // OpenWeatherMapから天気情報を取得
   const lat = 35.690921;
   const lon = 139.700258;
