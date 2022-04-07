@@ -12,7 +12,7 @@ const weather = (props: any) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   // OpenWeatherMapから天気情報を取得
   const lat = 35.690921;
   const lon = 139.700258;
@@ -25,6 +25,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       weatherNews,
+      fallback: "blocking",
     },
     revalidate: 60,
   };
