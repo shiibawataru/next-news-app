@@ -1,0 +1,19 @@
+.body {
+  background-color: #e6ecfd;
+  height: 500 px;
+  margin-top: 10px;
+  color: #1e3894;
+}
+
+.city {
+  float: right;
+}
+
+.a {
+  text-decoration: none;
+  color: #1e3894;
+}
+
+.a:hover {
+  text-decoration: underline;
+}

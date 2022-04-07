@@ -1,0 +1,21 @@
+.body {
+  background-color: #e6ecfd;
+  height: 500 px;
+  margin-top: 10px;
+}
+
+.a {
+  text-decoration: none;
+  color: #1e3894;
+}
+
+.a:hover {
+  text-decoration: underline;
+}
+
+.li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  list-style: inside;
+}

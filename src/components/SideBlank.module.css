@@ -1,0 +1,8 @@
+.body {
+  background-color: #e6ecfd;
+  margin-top: 10px;
+}
+
+.img {
+  object-fit: cover;
+}

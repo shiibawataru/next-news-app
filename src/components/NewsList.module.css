@@ -1,0 +1,16 @@
+.body {
+  height: 200px;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.a {
+  text-decoration: none;
+  color: #1e3894;
+}
+
+.a:hover {
+  text-decoration: underline;
+}
