@@ -1,0 +1,17 @@
+.body {
+  height: 200px;
+  background-color: aquamarine;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.a {
+  text-decoration: none;
+  color: #1e3894;
+}
+
+.a:hover {
+  text-decoration: underline;
+}

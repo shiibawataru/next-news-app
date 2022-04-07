@@ -1,0 +1,23 @@
+.body {
+  background-color: #e6ecfd;
+  /* height: 500 px; */
+  margin-top: 10px;
+  /* text-align: left; */
+}
+
+.ul {
+  list-style: none;
+}
+
+.li {
+  list-style: none;
+}
+
+.a {
+  text-decoration: none;
+  color: #1e3894;
+}
+
+.a:hover {
+  text-decoration: underline;
+}
