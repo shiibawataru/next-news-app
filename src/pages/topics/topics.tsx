@@ -28,6 +28,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       topicArticles,
+      fallback: "blocking",
     },
   };
 };

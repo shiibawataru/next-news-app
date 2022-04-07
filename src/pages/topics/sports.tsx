@@ -27,6 +27,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       sportsArticles,
+      fallback: "blocking",
     },
   };
 };
