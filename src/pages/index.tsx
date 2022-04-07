@@ -43,7 +43,7 @@ const Home = (props: any) => {
               <CategoryList />
               <SideBlank />
             </div>
-            <div className="col-md-6">
+            <div className="col-md-7">
               <Tabs>
                 <TabList>
                   <Tab>ニュース</Tab>
@@ -84,7 +84,7 @@ const Home = (props: any) => {
                 </TabPanel>
               </Tabs>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-3">
               <Weather
                 weatherNews={props.weatherNews}
                 articles={props.topicArticles}
