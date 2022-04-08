@@ -22,8 +22,9 @@ const Today = format(
 );
 
 const Home = (props: any) => {
-  console.log("W" + props.weatherNews);
-  console.log("WJ" + JSON.stringify(props.weatherNews));
+  console.log("NJ" + JSON.stringify(props.topicArticles));
+  // console.log("W" + props.weatherNews);
+  // console.log("WJ" + JSON.stringify(props.weatherNews));
 
   return (
     <>
