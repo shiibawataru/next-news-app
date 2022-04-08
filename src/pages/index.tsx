@@ -22,7 +22,8 @@ const Today = format(
 );
 
 const Home = (props: any) => {
-  console.log("TA" + JSON.stringify(props.topicArticles));
+  console.log("W" + props.weatherNews);
+  console.log("WJ" + JSON.stringify(props.weatherNews));
 
   return (
     <>
@@ -87,10 +88,10 @@ const Home = (props: any) => {
               </Tabs>
             </div>
             <div className="col-md-3">
-              <Weather
+              {/* <Weather
                 weatherNews={props.weatherNews}
                 articles={props.topicArticles}
-              />
+              /> */}
             </div>
           </div>
         </div>

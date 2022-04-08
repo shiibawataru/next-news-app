@@ -39,7 +39,7 @@ const WeekWeather: React.FC<Props> = ({ weatherNews }) => {
       </div>
       <div>
         <ul className="d-flex justify-content-center m-auto p-0 flex-wrap">
-          {weatherNews?.daily &&
+          {weatherNews &&
             weatherNews?.daily.map((date, index) => {
               return (
                 <div className="card p-2" key={index}>
