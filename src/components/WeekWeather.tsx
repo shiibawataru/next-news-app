@@ -39,32 +39,33 @@ const WeekWeather: React.FC<Props> = ({ weatherNews }) => {
       </div>
       <div>
         <ul className="d-flex justify-content-center m-auto p-0 flex-wrap">
-          {weatherNews?.daily.map((date, index) => {
-            return (
-              <div className="card p-2" key={index}>
-                <h5>{`${month}月${day + index}日(${
-                  dayOfWeekStr[dayOfWeek + index]
-                })`}</h5>
-                <Image
-                  src={`http://openweathermap.org/img/wn/${date.weather[0].icon}@2x.png`}
-                  className="card-img-top"
-                  alt="..."
-                  height={140}
-                  width={140}
-                />
-                <div className="card-body">
-                  <h4 className="card-title">{date.weather[0].main}</h4>
-                  <hr />
-                  <p className="card-text text-danger">
-                    {date.temp.max.toFixed(1)}℃
-                  </p>
-                  <p className="card-text text-primary">
-                    {date.temp.min.toFixed(1)}℃
-                  </p>
+          {weatherNews?.daily &&
+            weatherNews?.daily.map((date, index) => {
+              return (
+                <div className="card p-2" key={index}>
+                  <h5>{`${month}月${day + index}日(${
+                    dayOfWeekStr[dayOfWeek + index]
+                  })`}</h5>
+                  <Image
+                    src={`http://openweathermap.org/img/wn/${date.weather[0].icon}@2x.png`}
+                    className="card-img-top"
+                    alt="..."
+                    height={140}
+                    width={140}
+                  />
+                  <div className="card-body">
+                    <h4 className="card-title">{date.weather[0].main}</h4>
+                    <hr />
+                    <p className="card-text text-danger">
+                      {date.temp.max.toFixed(1)}℃
+                    </p>
+                    <p className="card-text text-primary">
+                      {date.temp.min.toFixed(1)}℃
+                    </p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
         </ul>
         <div className=" d-flex justify-content-center my-4">
           <Link href="/">
