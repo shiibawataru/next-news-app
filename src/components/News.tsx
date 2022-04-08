@@ -8,15 +8,16 @@ const News: React.FC<Props> = ({ articles }) => {
     <>
       <div className={styles.body}>
         <ul className="p-2">
-          {articles.map((article, index) => {
-            return (
-              <a key={index} href={article.url} className={`${styles.a}`}>
-                <li key={index} className={`m-1 ${styles.li}`}>
-                  {article.title}
-                </li>
-              </a>
-            );
-          })}
+          {articles &&
+            articles.map((article, index) => {
+              return (
+                <a key={index} href={article.url} className={`${styles.a}`}>
+                  <li key={index} className={`m-1 ${styles.li}`}>
+                    {article.title}
+                  </li>
+                </a>
+              );
+            })}
         </ul>
       </div>
     </>
