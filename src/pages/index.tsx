@@ -103,7 +103,7 @@ const Home = (props: any) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   // NewsAPIのトップ記事の情報を取得
   const pageSize = 8;
   const pageSizeForTop = `&pageSize=${pageSize}&`;
