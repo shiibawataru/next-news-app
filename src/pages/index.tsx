@@ -109,31 +109,31 @@ export const getServerSideProps = async () => {
   const pageSize = 8;
   const pageSizeForTop = `&pageSize=${pageSize}&`;
   //ニュース
-  const urlTopic = `https://newsapi.org/v2/top-headlines?country=jp${pageSizeForTop}apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
+  const urlTopic = `https://newsapi.org/v2/top-headlines?country=jp${pageSizeForTop}apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`;
   const topicRes = await fetch(urlTopic);
   const topicJson = await topicRes.json();
   const topicArticles = await topicJson?.articles;
   // const topicArticles = JSON.stringify(topicJson?.articles);
   // ビジネス用
-  const urlBusiness = `https://newsapi.org/v2/top-headlines?country=jp${pageSizeForTop}category=business&country=jp&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
+  const urlBusiness = `https://newsapi.org/v2/top-headlines?country=jp${pageSizeForTop}category=business&country=jp&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`;
   const businessRes = await fetch(urlBusiness);
   const businessJson = await businessRes.json();
   const businessArticles = await businessJson?.articles;
   // const businessArticles = JSON.stringify(businessJson?.articles);
   // 科学技術
-  const urlScience = `https://newsapi.org/v2/top-headlines?country=jp${pageSizeForTop}category=science&country=jp&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
+  const urlScience = `https://newsapi.org/v2/top-headlines?country=jp${pageSizeForTop}category=science&country=jp&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`;
   const scienceRes = await fetch(urlScience);
   const scienceJson = await scienceRes.json();
   const scienceArticles = await scienceJson?.articles;
   // const scienceArticles = JSON.stringify(scienceJson?.articles);
   // エンタメ
-  const urlEntertainment = `https://newsapi.org/v2/top-headlines?country=jp${pageSizeForTop}category=entertainment&country=jp&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
+  const urlEntertainment = `https://newsapi.org/v2/top-headlines?country=jp${pageSizeForTop}category=entertainment&country=jp&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`;
   const entertainmentRes = await fetch(urlEntertainment);
   const entertainmentJson = await entertainmentRes.json();
   const entertainmentArticles = await entertainmentJson?.articles;
   // const entertainmentArticles = JSON.stringify(entertainmentJson?.articles);
   // スポーツ
-  const urlSports = `https://newsapi.org/v2/top-headlines?country=jp${pageSizeForTop}category=sports&country=jp&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
+  const urlSports = `https://newsapi.org/v2/top-headlines?country=jp${pageSizeForTop}category=sports&country=jp&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`;
   const sportsRes = await fetch(urlSports);
   const sportsJson = await sportsRes.json();
   const sportsArticles = await sportsJson?.articles;
@@ -144,7 +144,7 @@ export const getServerSideProps = async () => {
   const lon = 139.700258;
   const exclude = "hourly,minutely";
   const weatherRes = await fetch(
-    `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=${exclude}&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}`
+    `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=${exclude}&appid=${process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY}`
   );
   const weatherJson = await weatherRes.json();
   const weatherNews = weatherJson;

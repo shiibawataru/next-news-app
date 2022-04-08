@@ -27,7 +27,7 @@ const Topics = (props: any) => {
 
 export const getServerSideProps = async () => {
   //ニュース
-  const urlTopic = `https://newsapi.org/v2/top-headlines?country=jp&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
+  const urlTopic = `https://newsapi.org/v2/top-headlines?country=jp&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`;
   const topicRes = await fetch(urlTopic);
   const topicJson = await topicRes.json();
   const topicArticles = await topicJson?.articles;

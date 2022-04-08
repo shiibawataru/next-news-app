@@ -25,7 +25,7 @@ const Entertainment = (props: any) => {
 };
 export const getServerSideProps = async () => {
   // エンタメ
-  const urlEntertainment = `https://newsapi.org/v2/top-headlines?country=jp&category=entertainment&country=jp&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
+  const urlEntertainment = `https://newsapi.org/v2/top-headlines?country=jp&category=entertainment&country=jp&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`;
   const entertainmentRes = await fetch(urlEntertainment);
   const entertainmentJson = await entertainmentRes.json();
   const entertainmentArticles = await entertainmentJson?.articles;

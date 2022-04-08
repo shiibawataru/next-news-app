@@ -24,7 +24,7 @@ const Sports = (props: any) => {
   );
 };
 export const getServerSideProps = async () => {
-  const urlSports = `https://newsapi.org/v2/top-headlines?country=jp&category=sports&country=jp&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
+  const urlSports = `https://newsapi.org/v2/top-headlines?country=jp&category=sports&country=jp&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`;
   const sportsRes = await fetch(urlSports);
   const sportsJson = await sportsRes.json();
   const sportsArticles = await sportsJson?.articles;

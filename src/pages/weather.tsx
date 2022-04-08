@@ -18,7 +18,7 @@ export const getServerSideProps = async () => {
   const lon = 139.700258;
   const exclude = "hourly,minutely";
   const weatherRes = await fetch(
-    `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=${exclude}&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}`
+    `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=${exclude}&appid=${process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY}`
   );
   const weatherJson = await weatherRes.json();
   const weatherNews = await weatherJson;
