@@ -14,13 +14,15 @@ const NewsList: React.FC<Props> = ({ articles }) => {
                 <a key={index} href={article.url} className={`${styles.a} `}>
                   <div className="row">
                     <div className="col-md-3  img-hidden d-flex justify-content-center">
-                      <img
-                        src={article.urlToImage}
-                        alt="img"
-                        className={`${styles.img} img-fulied max-width: 100% rounded`}
-                        width={180}
-                        height={180}
-                      />
+                      {article.urlToImage && (
+                        <img
+                          src={article.urlToImage}
+                          alt="img"
+                          className={`${styles.img} img-fulied max-width: 100% rounded`}
+                          width={180}
+                          height={180}
+                        />
+                      )}
                     </div>
                     <div className="col-md-9">
                       <h2>{article.title}</h2>
