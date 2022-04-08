@@ -4,6 +4,7 @@ import styles from "./News.module.css";
 import Props from "./types";
 
 const News: React.FC<Props> = ({ articles }) => {
+  console.log("NJC" + JSON.stringify(articles));
   return (
     <>
       <div className={styles.body}>
