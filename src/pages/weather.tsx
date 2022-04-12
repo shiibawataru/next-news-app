@@ -4,10 +4,10 @@ import WeekWeather from "../components/WeekWeather";
 const weather = (props: any) => {
   return (
     <>
-      {/* <WeekWeather
+      <WeekWeather
         weatherNews={props.weatherNews}
         articles={props.topicArticles}
-      /> */}
+      />
     </>
   );
 };

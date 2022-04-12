@@ -84,10 +84,10 @@ const Home = (props: any) => {
               </Tabs>
             </div>
             <div className="col-md-3">
-              {/* <Weather
+              <Weather
                 weatherNews={props.weatherNews}
                 articles={props.topicArticles}
-              /> */}
+              />
             </div>
           </div>
         </div>
