@@ -27,7 +27,7 @@ const CategoryCategoryList = () => {
             </Link>
           </li>
           <li>
-            <Link href="/movie">
+            <Link href="https://moviesearch-hooked-ts.vercel.app/">
               <a className={styles.a}>
                 <BiCameraMovie />
                 映画
