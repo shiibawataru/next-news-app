@@ -22,10 +22,10 @@ const Today = format(
 );
 
 const Home = (props: any) => {
-  console.log("NJ" + JSON.stringify(props.topicArticles));
+  // console.log("NJ" + JSON.stringify(props.topicArticles));
   // console.log("W" + props.weatherNews);
   // console.log("WJ" + JSON.stringify(props.weatherNews));
-
+  console.log(process.env.NEXT_PUBLIC_NEWS_API_KEY);
   return (
     <>
       <title>Wahoo! NIPPON</title>
@@ -105,6 +105,7 @@ const Home = (props: any) => {
 };
 
 export const getServerSideProps = async () => {
+  console.log(process.env.NEXT_PUBLIC_NEWS_API_KEY);
   // NewsAPIのトップ記事の情報を取得
   const pageSize = 8;
   const pageSizeForTop = `&pageSize=${pageSize}&`;
