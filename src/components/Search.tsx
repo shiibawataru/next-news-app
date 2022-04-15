@@ -2,6 +2,7 @@ import React from "react";
 import { BiSearchAlt } from "react-icons/bi";
 import styles from "./Search.module.css";
 
+// GOOGLE検索エンジン埋め込み
 const Search = () => {
   return (
     <>
